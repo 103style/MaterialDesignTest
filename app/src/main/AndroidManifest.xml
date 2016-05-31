@@ -20,10 +20,6 @@
             </intent-filter>
 
         </activity>
-        <activity
-            android:name=".BehaviorActivity"
-            android:label="@string/title_activity_behavior"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".TextInputLayoutActivity" />
         <activity
             android:name=".TestActivity"

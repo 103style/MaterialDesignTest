@@ -7,23 +7,23 @@
 
         <item
             android:id="@+id/navigation_item_1"
-            android:icon="@android:drawable/ic_dialog_email"
-            android:title="First" />
+            android:icon="@android:drawable/ic_btn_speak_now"
+            android:title="One" />
 
         <item
             android:id="@+id/navigation_item_2"
             android:icon="@android:drawable/ic_dialog_email"
-            android:title="First" />
+            android:title="Two" />
 
         <item
             android:id="@+id/navigation_item_3"
-            android:icon="@android:drawable/ic_dialog_email"
-            android:title="First" />
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Three" />
 
         <item
             android:id="@+id/navigation_item_4"
-            android:icon="@android:drawable/ic_dialog_email"
-            android:title="First" />
+            android:icon="@android:drawable/ic_input_delete"
+            android:title="Four" />
 
     </group>
 </menu>

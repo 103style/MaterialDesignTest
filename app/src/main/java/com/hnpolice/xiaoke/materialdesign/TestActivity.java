@@ -10,7 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-public class TestActivity extends AppCompatActivity  {
+public class TestActivity extends AppCompatActivity {
 
 
     Toolbar toolBar;
@@ -24,6 +24,9 @@ public class TestActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         toolBar = (Toolbar) findViewById(R.id.tool_bar);
+        if (toolBar != null) {
+            toolBar.setTitle(R.string.default_search_keyword);
+        }
         setSupportActionBar(toolBar);
 
 
@@ -46,7 +49,7 @@ public class TestActivity extends AppCompatActivity  {
 
     private void switchToBook() {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new BookFragment()).commit();
-        toolBar.setTitle(R.string.navigation_book);
+        toolBar.setTitle(R.string.navigation_about);
     }
 
     private void setUpProfileImage() {
@@ -69,12 +72,16 @@ public class TestActivity extends AppCompatActivity  {
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_item_1:
+                        toolBar.setTitle(R.string.navigation_about);
                         break;
                     case R.id.navigation_item_2:
+                        toolBar.setTitle(R.string.navigation_example);
                         break;
                     case R.id.navigation_item_3:
+                        toolBar.setTitle(R.string.navigation_my_blog);
                         break;
                     case R.id.navigation_item_4:
+                        toolBar.setTitle(R.string.navigation_book);
                         break;
                 }
                 item.setChecked(true);

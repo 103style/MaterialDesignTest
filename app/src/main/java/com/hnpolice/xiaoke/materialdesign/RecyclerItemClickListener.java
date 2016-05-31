@@ -1,4 +1,4 @@
-package com.hnpolice.xiaoke.materialdesign.book;
+package com.hnpolice.xiaoke.materialdesign;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

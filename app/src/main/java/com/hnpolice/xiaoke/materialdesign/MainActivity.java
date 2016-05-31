@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView dialog;
+    private TextView drawerlayout;
     FloatingActionButton fab;
 
     @Override
@@ -20,6 +21,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.collapsingtoolbarlayout);
 
         dialog = (TextView) findViewById(R.id.dialog);
+        drawerlayout = (TextView) findViewById(R.id.drawer_layout);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         dialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        drawerlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TestActivity.class));
             }
         });
+
 
     }
 }
