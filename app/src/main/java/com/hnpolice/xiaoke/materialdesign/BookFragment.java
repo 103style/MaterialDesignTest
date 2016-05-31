@@ -20,9 +20,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.google.android.agera.Updatable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +27,7 @@ import java.util.List;
  * create by luoxiaoke on 2016/5/31 9:25.
  * use for 列表展示界面
  */
-public class BookFragment extends Fragment implements Updatable {
+public class BookFragment extends Fragment {
 
     private FloatingActionButton mFab;
     private List<String> mBooks = new ArrayList<>();
@@ -69,12 +66,6 @@ public class BookFragment extends Fragment implements Updatable {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mFab.setTranslationY(2 * getResources().getDimensionPixelOffset(R.dimen.btn_fab_size));
-    }
-
-    @Override
-    public void update() {
-        startFABAnimation();
-
     }
 
     @Override
@@ -132,7 +123,7 @@ public class BookFragment extends Fragment implements Updatable {
 
         private static final int ANIMATED_ITEMS_COUNT = 4;
 
-        private boolean animateItems = false;
+        private boolean animateItems = true;
         private int lastAnimatedPosition = -1;
 
         @Override
@@ -144,10 +135,6 @@ public class BookFragment extends Fragment implements Updatable {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             runEnterAnimation(holder.itemView, position);
-            Glide.with(holder.ivBook.getContext())
-                    .load(R.drawable.book_pic)
-                    .centerCrop()
-                    .into(holder.ivBook);
         }
 
         private void runEnterAnimation(View view, int position) {
@@ -160,7 +147,7 @@ public class BookFragment extends Fragment implements Updatable {
                 view.setTranslationY(getResources().getDisplayMetrics().heightPixels);
                 view.animate()
                         .translationY(0)
-                        .setStartDelay(100 * position)
+                        .setStartDelay(200 * position)
                         .setInterpolator(new DecelerateInterpolator(3.f))
                         .setDuration(700)
                         .start();
