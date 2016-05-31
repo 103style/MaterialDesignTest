@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hnpolice.xiaoke.materialdesign.MainActivity">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_item_1"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="First" />
+
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="First" />
+
+        <item
+            android:id="@+id/navigation_item_3"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="First" />
+
+        <item
+            android:id="@+id/navigation_item_4"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="First" />
+
+    </group>
+</menu>
