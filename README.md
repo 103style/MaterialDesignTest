@@ -1,6 +1,6 @@
 # MaterialDesignTest
 
-[APK](https://github.com/103style/MaterialDesignTest/blob/master/APK/MaterialDesign.apk)
+[APK](https://raw.githubusercontent.com/103style/MaterialDesignTest/master/APK/MaterialDesign.apk)
 
 Show
 
